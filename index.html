@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mining Consultancy Company</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header-transparent">
+      <div class="container">
+        <div class="logo">Mining Consultancy Company</div>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#countries">Countries</a></li>
+            <li><a href="#commodities">Commodities</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Expert Consulting for Mining Operations</h1>
+        <p>Providing effective solutions to the global mining industry.</p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          We offer specialized consulting services to optimize your mining
+          operations.
+        </p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="service">
+          <h3>Consulting</h3>
+          <p>Mineral exploration, geological studies, and more.</p>
+        </div>
+        <div class="service">
+          <h3>Engineering</h3>
+          <p>
+            Mine design, geotechnical analyses, and multidisciplinary
+            engineering.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Project Management</h3>
+          <p>
+            Project and engineering management, risk management, and financial
+            modeling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="countries" class="countries">
+      <div class="container">
+        <h2>Countries</h2>
+        <p>We have provided services to clients in over 20 countries.</p>
+      </div>
+    </section>
+
+    <section id="commodities" class="commodities">
+      <div class="container">
+        <h2>Commodities</h2>
+        <p>
+          We have expertise in a wide range of commodities including copper,
+          gold, and diamonds.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Our portfolio includes over 200 successful projects.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Mining Consultancy Company. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
