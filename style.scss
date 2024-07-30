@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 
+$color-dark: #00856f;
+$color-light: #f1f7f6;
+$xxL: 1920px;
+$xL: 1560px;
+
 body {
   font-family: Arial, sans-serif;
+  //   font-family: "Open sans", sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f1f7f6;
+  background-color: $color-light;
 }
 
 .container {
@@ -78,28 +84,32 @@ header nav ul li a {
 }
 
 .hero {
-  background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat center center/cover;
+  background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat
+    center center/cover;
   min-height: 700px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.hero .btn {
-  background: #ff9900;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    background: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
 }
 
 section {
@@ -140,17 +150,18 @@ section {
 .circle {
   width: 70px;
   height: 70px;
-  background-color: #00856f;
+  background-color: $color-dark;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 20px;
   flex-shrink: 0;
-}
-.circle i {
-  color: #fff;
-  font-size: 2rem;
+
+  i {
+    color: #fff;
+    font-size: 2rem;
+  }
 }
 
 .text h3 {
@@ -166,8 +177,8 @@ section {
 }
 
 footer {
-  background: #00856f;
+  background: $color-dark;
   color: #fff;
   text-align: center;
   padding: 10px 0;
-}/*# sourceMappingURL=style.css.map */
+}
