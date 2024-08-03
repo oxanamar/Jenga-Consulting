@@ -186,6 +186,45 @@ section {
   margin-bottom: 20px;
 }
 
+// Highlights Section
+
+.highlights_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem 10rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+  width: 100%;
+  // max-width: 550px;
+  // height: 550px;
+}
+
+.card__img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.card__text p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+// Footer
 footer {
   background: $color-dark;
   color: #fff;
