@@ -1,3 +1,284 @@
+@use "./codyframe-main/main/scss/config" as * with (
+  $util-prefix: "",
+  $breakpoints: (
+    "xs": "32rem",
+    "sm": "48rem",
+    "md": "64rem",
+    "lg": "80rem",
+    "xl": "90rem",
+  ),
+  $grid-columns: 12,
+  $spacing: (
+    "4xs": "0.125rem",
+    "3xs": "0.25rem",
+    "2xs": "0.5rem",
+    "xs": "0.75rem",
+    "sm": "1rem",
+    "md": "1.5rem",
+    "lg": "2.25rem",
+    "xl": "3.5rem",
+    "2xl": "5.75rem",
+    "3xl": "9.25rem",
+    "4xl": "15rem",
+  ),
+  $font-family: (
+    "primary": "system-ui, sans-serif",
+  ),
+  $font-size: (
+    "xs": "0.6875rem",
+    "sm": "0.8125rem",
+    "base": "1rem",
+    "md": "1.1875rem",
+    "lg": "1.4375rem",
+    "xl": "1.75rem",
+    "2xl": "2.0625rem",
+    "3xl": "2.5rem",
+    "4xl": "3rem",
+  ),
+  $line-height: (
+    "xs": "1.1",
+    "sm": "1.2",
+    "md": "1.4",
+    "lg": "1.58",
+    "xl": "1.72",
+  ),
+  $colors: (
+    "default": (
+      "primary": (
+        "darker": "250, 84%, 38%",
+        "dark": "250, 84%, 46%",
+        "base": "250, 84%, 54%",
+        "light": "250, 84%, 60%",
+        "lighter": "250, 84%, 67%",
+      ),
+      "accent": (
+        "darker": "342, 89%, 38%",
+        "dark": "342, 89%, 43%",
+        "base": "342, 89%, 48%",
+        "light": "342, 89%, 56%",
+        "lighter": "342, 89%, 62%",
+      ),
+      "black": (
+        "base": "230, 13%, 9%",
+      ),
+      "white": (
+        "base": "0, 0%, 100%",
+      ),
+      "warning": (
+        "darker": "35, 79%, 48%",
+        "dark": "35, 79%, 56%",
+        "base": "35, 79%, 66%",
+        "light": "35, 79%, 74%",
+        "lighter": "35, 79%, 82%",
+      ),
+      "success": (
+        "darker": "170, 78%, 26%",
+        "dark": "170, 78%, 31%",
+        "base": "170, 78%, 36%",
+        "light": "170, 78%, 42%",
+        "lighter": "170, 78%, 47%",
+      ),
+      "error": (
+        "darker": "342, 89%, 38%",
+        "dark": "342, 89%, 43%",
+        "base": "342, 89%, 48%",
+        "light": "342, 89%, 56%",
+        "lighter": "342, 89%, 62%",
+      ),
+      "bg": (
+        "darker": "240, 4%, 90%",
+        "dark": "240, 4%, 95%",
+        "base": "0, 0%, 100%",
+        "light": "0, 0%, 100%",
+        "lighter": "0, 0%, 100%",
+      ),
+      "contrast": (
+        "lower": "240, 4%, 85%",
+        "low": "240, 4%, 65%",
+        "medium": "225, 4%, 47%",
+        "high": "230, 7%, 23%",
+        "higher": "230, 13%, 9%",
+      ),
+    ),
+    "dark": (
+      "primary": (
+        "darker": "250, 100%, 60%",
+        "dark": "250, 100%, 64%",
+        "base": "250, 100%, 69%",
+        "light": "250, 100%, 72%",
+        "lighter": "250, 100%, 76%",
+      ),
+      "accent": (
+        "darker": "342, 92%, 41%",
+        "dark": "342, 92%, 47%",
+        "base": "342, 92%, 54%",
+        "light": "342, 92%, 60%",
+        "lighter": "342, 92%, 65%",
+      ),
+      "black": (
+        "base": "230, 13%, 9%",
+      ),
+      "white": (
+        "base": "0, 0%, 100%",
+      ),
+      "warning": (
+        "darker": "35, 79%, 48%",
+        "dark": "35, 79%, 56%",
+        "base": "35, 79%, 66%",
+        "light": "35, 79%, 74%",
+        "lighter": "35, 79%, 82%",
+      ),
+      "success": (
+        "darker": "170, 78%, 26%",
+        "dark": "170, 78%, 31%",
+        "base": "170, 78%, 36%",
+        "light": "170, 78%, 42%",
+        "lighter": "170, 78%, 47%",
+      ),
+      "error": (
+        "darker": "342, 92%, 41%",
+        "dark": "342, 92%, 47%",
+        "base": "342, 92%, 54%",
+        "light": "342, 92%, 60%",
+        "lighter": "342, 92%, 65%",
+      ),
+      "bg": (
+        "darker": "232, 7%, 8%",
+        "dark": "233, 8%, 11%",
+        "base": "232, 11%, 15%",
+        "light": "233, 8%, 19%",
+        "lighter": "232, 7%, 22%",
+      ),
+      "contrast": (
+        "lower": "240, 6%, 26%",
+        "low": "240, 3%, 41%",
+        "medium": "231, 3%, 57%",
+        "high": "240, 5%, 82%",
+        "higher": "240, 100%, 99%",
+      ),
+    ),
+  ),
+  $aspect-ratio: (
+    16 9,
+    3 2,
+    4 3,
+    5 4,
+    1 1,
+    4 5,
+    3 4,
+    2 3,
+    9 16,
+  ),
+  $media-wrapper: (
+    16 9,
+    3 2,
+    4 3,
+    1 1,
+  ),
+  $width: (
+    "4xs": "0.25rem",
+    "3xs": "0.5rem",
+    "2xs": "0.75rem",
+    "xs": "1rem",
+    "sm": "1.5rem",
+    "md": "2rem",
+    "lg": "3rem",
+    "xl": "4rem",
+    "2xl": "6rem",
+    "3xl": "8rem",
+    "4xl": "16rem",
+    0: "0",
+    10\%: "10%",
+    20\%: "20%",
+    25\%: "25%",
+    30\%: "30%",
+    33\%: "33%",
+    40\%: "40%",
+    50\%: "50%",
+    60\%: "60%",
+    70\%: "70%",
+    75\%: "75%",
+    80\%: "80%",
+    90\%: "90%",
+    100\%: "100%",
+  ),
+  $height: (
+    "4xs": "0.25rem",
+    "3xs": "0.5rem",
+    "2xs": "0.75rem",
+    "xs": "1rem",
+    "sm": "1.5rem",
+    "md": "2rem",
+    "lg": "3rem",
+    "xl": "4rem",
+    "2xl": "6rem",
+    "3xl": "8rem",
+    "4xl": "16rem",
+    0: "0",
+    10\%: "10%",
+    20\%: "20%",
+    25\%: "25%",
+    30\%: "30%",
+    33\%: "33%",
+    40\%: "40%",
+    50\%: "50%",
+    60\%: "60%",
+    70\%: "70%",
+    75\%: "75%",
+    80\%: "80%",
+    90\%: "90%",
+    100\%: "100%",
+  ),
+  $max-width: (
+    "3xs": "20rem",
+    "2xs": "26rem",
+    "xs": "32rem",
+    "sm": "48rem",
+    "md": "64rem",
+    "lg": "80rem",
+    "xl": "90rem",
+  ),
+  $container-margin-x: var(--space-md),
+  $box-shadow: (
+    "ring":
+      "0 0 0 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.05)",
+    "xs":
+      "0 0 0 1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0 1px 3px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.2)",
+    "sm":
+      "0 0.3px 0.4px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.02), 0 0.9px 1.5px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.045), 0 3.5px 6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.09)",
+    "md":
+      "0 0.9px 1.25px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.025), 0 3px 5px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.05), 0 12px 20px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.09)",
+    "lg":
+      "0 1.2px 1.9px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.01), 0 3px 5px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.015), 0 8px 15px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.05), 0 28px 40px -1px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.1)",
+    "xl":
+      "0 1.5px 2.1px -6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.009), 0 3.6px 5.2px -6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.0115), 0 7.3px 10.6px -6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.0125), 0 16.2px 21.9px -6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.025), 0 46px 60px -6px hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.15)",
+  ),
+  $inner-glow: (
+    "glow":
+      "inset 0 0 0.5px 1px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.075)",
+    "glow-top":
+      "inset 0 1px 0.5px hsla(var(--color-white-h), var(--color-white-s), var(--color-white-l), 0.075)",
+  ),
+  $border-radius: (
+    "sm": "0.1875em",
+    "md": "0.375em",
+    "lg": "0.75em",
+  ),
+  $z-index: (
+    "header": "3",
+    "popover": "5",
+    "fixed-element": "10",
+    "overlay": "15",
+  )
+);
+
+@use "./codyframe-main/main/scss/reset.scss";
+@use "./codyframe-main/main/scss/typography.scss";
+@use "./codyframe-main/main/scss/buttons.scss";
+@use "./codyframe-main/main/scss/icons.scss";
+@use "./codyframe-main/main/scss/forms.scss";
+@use "./codyframe-main/main/scss/util.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +298,7 @@ body {
   background-color: $color-light;
 }
 
-.container {
+.container-hero {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -86,8 +367,7 @@ header nav ul li a {
 .hero {
   position: relative;
   overflow: hidden;
-  background: url("./img/a9fcea5c-434c-4e8b-8998-6265703c939f.JPG") no-repeat
-    center center/cover;
+  background: url("./img/3D\ facade.jpg") no-repeat center center/cover;
   min-height: 1000px;
   color: #fff;
   display: flex;
@@ -105,7 +385,7 @@ header nav ul li a {
     margin-bottom: 20px;
   }
 
-  .hero .container {
+  .hero .container-hero {
     position: relative;
     z-index: 1;
   }
@@ -188,40 +468,272 @@ section {
 
 // Highlights Section
 
-.highlights_container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 1rem 10rem;
+// .highlights_container {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   gap: 2rem;
+//   padding: 1rem 10rem;
+// }
+
+// .card {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   text-align: center;
+//   background-color: #fff;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   overflow: hidden;
+//   padding: 10px;
+//   width: 100%;
+// }
+
+// .card__img img {
+//   width: 100%;
+//   height: auto;
+//   border-bottom: 1px solid #ddd;
+//   margin-bottom: 10px;
+// }
+
+// .card__text p {
+//   font-size: 1rem;
+//   margin: 0;
+//   color: #333;
+//   line-height: 1.5;
+// }
+:root {
+  // colors
+  @include defineColorHSL(--cd-color-1, 206, 21%, 24%); // Navy
+  @include defineColorHSL(--cd-color-2, 205, 38%, 89%); // Blue
+  @include defineColorHSL(--cd-color-3, 207, 10%, 55%); // Grey
+  @include defineColorHSL(--cd-color-4, 111, 51%, 60%); // Green
+  @include defineColorHSL(--cd-color-5, 356, 53%, 49%); // Red
+  @include defineColorHSL(--cd-color-6, 47, 85%, 61%); // Yellow
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@supports (--css: variables) {
+  :root {
+    @include breakpoint(md) {
+      --cd-header-height: 300px;
+    }
+  }
+}
+
+.cd-timeline {
   overflow: hidden;
-  padding: 10px;
-  width: 100%;
-  // max-width: 550px;
-  // height: 550px;
+  padding: var(--space-lg) 0;
+  color: var(--cd-color-3);
+  background-color: lightness(var(--cd-color-2), 1.05);
+  font-family: var(--font-primary);
+
+  h2 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+  }
 }
 
-.card__img img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 10px;
+.cd-timeline__container {
+  position: relative;
+  padding: var(--space-md) 0;
+
+  &::before {
+    // this is the timeline vertical line
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: var(--cd-color-2);
+  }
+
+  @include breakpoint(md) {
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
-.card__text p {
-  font-size: 1rem;
-  margin: 0;
-  color: #333;
-  line-height: 1.5;
+.cd-timeline__block {
+  display: flex;
+  position: relative;
+  z-index: 1; // make sure content is above the timeline vertical line
+  margin-bottom: var(--space-lg);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(md) {
+    &:nth-child(even) {
+      flex-direction: row-reverse; // for even blocks -> lay out content from right to left
+    }
+  }
+}
+
+.cd-timeline__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--color-white), inset 0 2px 0 rgba(#000, 0.08),
+    0 3px 0 4px rgba(#000, 0.05);
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include breakpoint(md) {
+    width: 60px;
+    height: 60px;
+    order: 1; // flex order -> place the image after cd-timeline__content
+    margin-left: calc(5% - 30px);
+    will-change: transform;
+
+    .cd-timeline__block:nth-child(even) & {
+      margin-right: calc(5% - 30px);
+    }
+  }
+}
+
+.cd-timeline__img--picture {
+  background-color: var(--cd-color-6);
+}
+
+.cd-timeline__content {
+  flex-grow: 1; // expand element so that it takes up all the available space inside its parent
+  position: relative;
+  margin-left: var(--space-md);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: 0 3px 0 var(--cd-color-2);
+
+  &::before {
+    // triangle next to content block
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    @include triangle(left, 7px, var(--color-white));
+  }
+
+  h2 {
+    color: var(--cd-color-1);
+  }
+
+  img {
+    // width: 60%;
+  }
+
+  @include breakpoint(md) {
+    width: 45%;
+    flex-grow: 0; // prevent element from growing inside its parent
+    will-change: transform;
+    margin: 0;
+    font-size: 0.8em;
+    --line-height-multiplier: 1.2;
+
+    &::before {
+      // triangle
+      top: 24px;
+    }
+
+    .cd-timeline__block:nth-child(odd) &::before {
+      // change triangle direction
+      right: auto;
+      left: 100%;
+      @include triangle(right, 7px, var(--color-white));
+    }
+  }
+}
+
+.cd-timeline__date {
+  color: alpha(var(--cd-color-3), 0.7);
+
+  @include breakpoint(md) {
+    position: absolute;
+    width: 100%;
+    left: 120%;
+    top: 20px;
+
+    .cd-timeline__block:nth-child(even) & {
+      left: auto;
+      right: 120%;
+      text-align: right;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  // animations
+  .cd-timeline__img--hidden,
+  .cd-timeline__content--hidden {
+    visibility: hidden;
+  }
+
+  .cd-timeline__img--bounce-in {
+    animation: cd-bounce-1 0.6s;
+  }
+
+  .cd-timeline__content--bounce-in {
+    animation: cd-bounce-2 0.6s;
+  }
+
+  .cd-timeline__block:nth-child(even) .cd-timeline__content--bounce-in {
+    animation-name: cd-bounce-2-inverse;
+  }
+}
+
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 // Footer
