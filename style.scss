@@ -606,6 +606,8 @@ section {
 }
 
 .cd-timeline__content {
+  // transform: scale(0.8); //add
+  // transform-origin: top; //add
   flex-grow: 1; // expand element so that it takes up all the available space inside its parent
   position: relative;
   margin-left: var(--space-md);
@@ -628,7 +630,8 @@ section {
   }
 
   img {
-    // width: 60%;
+    width: 100%;
+    height: auto;
   }
 
   @include breakpoint(md) {
@@ -660,6 +663,7 @@ section {
     position: absolute;
     width: 100%;
     left: 120%;
+    // left: 140%;
     top: 20px;
 
     .cd-timeline__block:nth-child(even) & {
@@ -679,6 +683,7 @@ section {
 
   .cd-timeline__img--bounce-in {
     animation: cd-bounce-1 0.6s;
+    // transform: scale(0.8) !important; //add
   }
 
   .cd-timeline__content--bounce-in {
@@ -693,26 +698,26 @@ section {
 @keyframes cd-bounce-1 {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.5); //0.5
   }
   60% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.2); //1.2
   }
   100% {
-    transform: scale(1);
+    transform: scale(1); //1
   }
 }
 
 @keyframes cd-bounce-2 {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-100px); //-100
   }
 
   60% {
     opacity: 1;
-    transform: translateX(20px);
+    transform: translateX(20px); //20
   }
 
   100% {
@@ -723,12 +728,12 @@ section {
 @keyframes cd-bounce-2-inverse {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(100px); //100
   }
 
   60% {
     opacity: 1;
-    transform: translateX(-20px);
+    transform: translateX(-20px); //-20
   }
 
   100% {
