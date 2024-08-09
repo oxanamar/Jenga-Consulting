@@ -12070,6 +12070,10 @@ section {
   --cd-color-6-h: 47;
   --cd-color-6-s: 85%;
   --cd-color-6-l: 61%;
+  --cd-darker-green: hsl(150, 20%, 88%);
+  --cd-darker-green-h: 150;
+  --cd-darker-green-s: 20%;
+  --cd-darker-green-l: 88%;
 }
 
 @supports (--css: variables) {
@@ -12083,7 +12087,7 @@ section {
   overflow: hidden;
   padding: var(--space-lg) 0;
   color: var(--cd-color-3);
-  background-color: hsl(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l) * 1.05));
+  background-color: #f1f7f6;
   font-family: var(--font-primary);
 }
 .cd-timeline h2 {
@@ -12102,7 +12106,7 @@ section {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: var(--cd-color-2);
+  background: var(--cd-darker-green);
 }
 @media (min-width: 64rem) {
   .cd-timeline__container::before {
@@ -12164,7 +12168,7 @@ section {
   background: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--space-md);
-  box-shadow: 0 3px 0 var(--cd-color-2);
+  box-shadow: 0 3px 0 var(--cd-darker-green);
 }
 .cd-timeline__content::before {
   content: "";

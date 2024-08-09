@@ -509,6 +509,7 @@ section {
   @include defineColorHSL(--cd-color-4, 111, 51%, 60%); // Green
   @include defineColorHSL(--cd-color-5, 356, 53%, 49%); // Red
   @include defineColorHSL(--cd-color-6, 47, 85%, 61%); // Yellow
+  @include defineColorHSL(--cd-darker-green, 150, 20%, 88%);
 }
 
 @supports (--css: variables) {
@@ -523,7 +524,8 @@ section {
   overflow: hidden;
   padding: var(--space-lg) 0;
   color: var(--cd-color-3);
-  background-color: lightness(var(--cd-color-2), 1.05);
+  // background-color: lightness(var(--cd-color-2), 1.05);
+  background-color: $color-light;
   font-family: var(--font-primary);
 
   h2 {
@@ -544,7 +546,8 @@ section {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: var(--cd-color-2);
+    // background: var(--cd-color-2);
+    background: var(--cd-darker-green);
   }
 
   @include breakpoint(md) {
@@ -614,7 +617,8 @@ section {
   background: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--space-md);
-  box-shadow: 0 3px 0 var(--cd-color-2);
+  // box-shadow: 0 3px 0 var(--cd-color-2);
+  box-shadow: 0 3px 0 var(--cd-darker-green);
 
   &::before {
     // triangle next to content block
