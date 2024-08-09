@@ -629,6 +629,11 @@ section {
     color: var(--cd-color-1);
   }
 
+  p {
+    font-size: 0.8rem;
+    padding-top: 0.6rem;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -658,6 +663,7 @@ section {
 
 .cd-timeline__date {
   color: alpha(var(--cd-color-3), 0.7);
+  font-size: 1rem;
 
   @include breakpoint(md) {
     position: absolute;
