@@ -305,6 +305,11 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
+  z-index: 1;
+
+  h1 {
+    color: #fff;
+  }
 }
 
 .navbar {
@@ -373,12 +378,15 @@ header nav ul li a {
   overflow: hidden;
   background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat
     center center/cover;
-  min-height: 800px;
+  // min-height: 800px;
+  min-height: 100vh;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: -100px;
+  z-index: -2;
 
   h1 {
     font-size: 3rem;
@@ -410,7 +418,7 @@ section {
 
 /* About */
 .about {
-  padding: 120px 20px 40px 20px;
+  padding: 120px 20px 80px 20px;
 }
 
 .about-content {
@@ -751,7 +759,18 @@ section {
 
 // Partners
 #partners {
+  padding: 30px 40px 65px 40px;
   background-color: #fff;
+  max-width: 80%;
+  margin: 0 auto;
+  z-index: 2;
+  border-radius: 5px;
+
+  h3 {
+    padding-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+  }
 }
 
 .container-partners {
