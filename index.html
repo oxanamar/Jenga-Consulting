@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Jenga Consulting And Cooperation JCC</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,17 +15,17 @@
     <header class="header-transparent">
       <div class="container navbar">
         <div class="logo">
-          <img src="./img/logo-words.png" alt="logo" id="logo">
+          <img src="./img/logocorrect.png" alt="logo" id="logo">
           <!-- <p>Jenga consulting and cooperation sarl</p> -->
           </div>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#countries">Countries</a></li>
-            <li><a href="#commodities">Commodities</a></li>
+            <li><a href="#partners">Our Partners</a></li>
+            <!-- <li><a href="#commodities">Commodities</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li> -->
           </ul>
         </nav>
       </div>
@@ -30,9 +33,27 @@
 
     <section class="hero">
       <div class="container-hero">
-        <!-- <h1>Expert Consulting for Mining Operations</h1>
+        <h1>Expert Consulting for Mining Operations</h1>
         <p>Providing effective solutions to the global mining industry.</p>
-        <a href="#contact" class="btn">Contact Us</a> -->
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners">
+      <div class="container-partners">
+        <div class="partner-img">
+        <img src="./img/partner1.png" alt="">
+      </div>
+      <div class="partner-img">
+        <img src="./img/partner2.png" alt="">
+      </div>
+      <div class="partner-img">
+        <img src="./img/partner3.png" alt="">
+      </div>
+        <div class="partner-img">
+        <img src="./img/partner4.png" alt="">
+      </div>
       </div>
     </section>
 
@@ -41,7 +62,7 @@
         <div class="about-content">
           <div class="wrap">
           <div class="circle">
-          <i class="fas fa-comments"></i>
+          <i class="fas fa-comments fa-2x"></i>
           </div>
           <div class="text">
             <h3>What We Do</h3>
@@ -50,7 +71,7 @@
           </div>
           <div class="wrap">
           <div class="circle">
-          <i class="fas fa-tree"></i>
+          <i class="fas fa-tree fa-2x"></i>
           </div>
           <div class="text">
             <h3>Community Engagement</h3>
@@ -59,7 +80,7 @@
         </div>
         <div class="wrap">
           <div class="circle">
-          <i class="fas fa-check"></i>
+          <i class="fas fa-check fa-2x"></i>
           </div>
           <div class="text">
             <h3>Our Commitment</h3>
@@ -70,8 +91,10 @@
         </div>
     </section>
 
+    
+
     <!-- Highlights Section -->
-    <section class="cd-timeline js-cd-timeline">
+    <section class="cd-timeline js-cd-timeline" id="highlights">
       <div class="container max-width-lg cd-timeline__container">
         <div class="cd-timeline__block">
           <div class="cd-timeline__img cd-timeline__img--picture">
@@ -190,14 +213,24 @@
     </section> <!-- cd-timeline -->
   
 
-    <section id="countries" class="countries">
-      <div class="container">
-        <h2>Countries</h2>
-        <p>We have provided services to clients in over 20 countries.</p>
+    <!-- <section id="partners">
+      <div class="container-partners">
+        <div class="partner-img">
+        <img src="./img/partner1.png" alt="">
       </div>
-    </section>
+      <div class="partner-img">
+        <img src="./img/partner2.png" alt="">
+      </div>
+      <div class="partner-img">
+        <img src="./img/partner3.png" alt="">
+      </div>
+        <div class="partner-img">
+        <img src="./img/partner4.png" alt="">
+      </div>
+      </div>
+    </section> -->
 
-    <section id="commodities" class="commodities">
+    <!-- <section id="commodities" class="commodities">
       <div class="container">
         <h2>Commodities</h2>
         <p>
@@ -216,22 +249,14 @@
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Contact Us</h2>
-        <!-- <form action="submit_form.php" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">Submit</button> -->
-        </form>
-      </div>
-    </section>
+        <h2>Contact Us</h2> -->
+       
+      <!-- </div>
+    </section> -->
 
     <footer>
       <div class="container">
-        <p>&copy; 2024 Mining Consultancy Company. All Rights Reserved.</p>
+        <p>&copy; 2024 Jenga consulting and cooperation Sarl. All Rights Reserved.</p>
       </div>
     </footer>
 

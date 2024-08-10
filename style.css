@@ -11873,10 +11873,12 @@ small {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f1f7f6;
@@ -11946,13 +11948,14 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .hero {
   position: relative;
   overflow: hidden;
-  background: url("./img/3D facade.jpg") no-repeat center center/cover;
-  min-height: 1000px;
+  background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat center center/cover;
+  min-height: 800px;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -11983,17 +11986,9 @@ section {
   padding: 40px 0;
 }
 
-.services,
-.countries,
-.commodities,
-.projects,
-.contact {
-  text-align: center;
-}
-
 /* About */
 .about {
-  padding: 120px 20px;
+  padding: 120px 20px 40px 20px;
 }
 
 .about-content {
@@ -12014,8 +12009,8 @@ section {
 }
 
 .circle {
-  width: 70px;
-  height: 70px;
+  width: 68px;
+  height: 68px;
   background-color: #00856f;
   border-radius: 50%;
   display: flex;
@@ -12285,6 +12280,29 @@ section {
     transform: translateX(0);
   }
 }
+#partners {
+  background-color: #fff;
+}
+
+.container-partners {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.partner-img {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.partner-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 footer {
   background: #00856f;
   color: #fff;
