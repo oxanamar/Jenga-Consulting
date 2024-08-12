@@ -290,6 +290,9 @@
 
 $color-dark: #00856f;
 $color-light: #f1f7f6;
+$color-grey: rgb(109, 138, 147);
+$color-sky: #4f6c75;
+$color-darker: rgb(50, 79, 88);
 $xxL: 1920px;
 $xL: 1560px;
 
@@ -378,7 +381,7 @@ header nav ul li a {
   overflow: hidden;
   background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat
     center center/cover;
-  // min-height: 800px;
+  // min-height: 800px;x
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -441,7 +444,7 @@ section {
 .circle {
   width: 68px;
   height: 68px;
-  background-color: $color-dark;
+  background-color: $color-darker;
   // background-color: #28a745;
   border-radius: 50%;
   display: flex;
@@ -516,6 +519,7 @@ section {
   @include defineColorHSL(--cd-color-5, 356, 53%, 49%); // Red
   @include defineColorHSL(--cd-color-6, 47, 85%, 61%); // Yellow
   @include defineColorHSL(--cd-darker-green, 150, 20%, 88%);
+  @include defineColorHSL(--cd-color-7, 196, 30%, 50%);
 }
 
 @supports (--css: variables) {
@@ -531,12 +535,16 @@ section {
   padding: var(--space-lg) 0;
   color: var(--cd-color-3);
   // background-color: lightness(var(--cd-color-2), 1.05);
-  background-color: $color-light;
+  background: url("./img/clyde-rs-4XbZCfU2Uoo-unsplash.jpg") no-repeat center
+    center/cover;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+  // background-color: $color-light;
   font-family: var(--font-primary);
 
   h2 {
     font-family: var(--font-secondary);
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -553,7 +561,8 @@ section {
     height: 100%;
     width: 4px;
     // background: var(--cd-color-2);
-    background: var(--cd-darker-green);
+    // background: var(--cd-darker-green);
+    background: rgb(109, 138, 147);
   }
 
   @include breakpoint(md) {
@@ -586,8 +595,8 @@ section {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--color-white), inset 0 2px 0 rgba(#000, 0.08),
     0 3px 0 4px rgba(#000, 0.05);
@@ -624,7 +633,8 @@ section {
   border-radius: var(--radius-md);
   padding: var(--space-md);
   // box-shadow: 0 3px 0 var(--cd-color-2);
-  box-shadow: 0 3px 0 var(--cd-darker-green);
+  // box-shadow: 0 3px 0 var(--cd-darker-green);
+  box-shadow: 0 4px 10px rgb(109, 138, 147);
 
   &::before {
     // triangle next to content block
@@ -769,7 +779,7 @@ section {
   h3 {
     padding-bottom: 1.5rem;
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
   }
 }
 
@@ -793,7 +803,7 @@ section {
 
 // Footer
 footer {
-  background: $color-dark;
+  background: $color-darker;
   color: #fff;
   text-align: center;
   padding: 10px 0;

@@ -12017,7 +12017,7 @@ section {
 .circle {
   width: 68px;
   height: 68px;
-  background-color: #00856f;
+  background-color: rgb(50, 79, 88);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -12075,6 +12075,10 @@ section {
   --cd-darker-green-h: 150;
   --cd-darker-green-s: 20%;
   --cd-darker-green-l: 88%;
+  --cd-color-7: hsl(196, 30%, 50%);
+  --cd-color-7-h: 196;
+  --cd-color-7-s: 30%;
+  --cd-color-7-l: 50%;
 }
 
 @supports (--css: variables) {
@@ -12088,12 +12092,14 @@ section {
   overflow: hidden;
   padding: var(--space-lg) 0;
   color: var(--cd-color-3);
-  background-color: #f1f7f6;
+  background: url("./img/clyde-rs-4XbZCfU2Uoo-unsplash.jpg") no-repeat center center/cover;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: var(--font-primary);
 }
 .cd-timeline h2 {
   font-family: var(--font-secondary);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .cd-timeline__container {
@@ -12107,7 +12113,7 @@ section {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: var(--cd-darker-green);
+  background: rgb(109, 138, 147);
 }
 @media (min-width: 64rem) {
   .cd-timeline__container::before {
@@ -12136,8 +12142,8 @@ section {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--color-white), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
@@ -12169,7 +12175,7 @@ section {
   background: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--space-md);
-  box-shadow: 0 3px 0 var(--cd-darker-green);
+  box-shadow: 0 4px 10px rgb(109, 138, 147);
 }
 .cd-timeline__content::before {
   content: "";
@@ -12297,7 +12303,7 @@ section {
 #partners h3 {
   padding-bottom: 1.5rem;
   text-align: center;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .container-partners {
@@ -12320,7 +12326,7 @@ section {
 }
 
 footer {
-  background: #00856f;
+  background: rgb(50, 79, 88);
   color: #fff;
   text-align: center;
   padding: 10px 0;
