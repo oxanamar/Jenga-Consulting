@@ -545,6 +545,7 @@ section {
   h2 {
     font-family: var(--font-secondary);
     font-weight: 500;
+    font-size: 1.6rem;
   }
 }
 
@@ -624,14 +625,16 @@ section {
 }
 
 .cd-timeline__content {
-  // transform: scale(0.8); //add
-  // transform-origin: top; //add
-  flex-grow: 1; // expand element so that it takes up all the available space inside its parent
-  position: relative;
-  margin-left: var(--space-md);
+  // flex-grow: 1; // expand element so that it takes up all the available space inside its parent
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  // position: relative;
+  // margin-left: var(--space-md);
   background: var(--color-white);
   border-radius: var(--radius-md);
-  padding: var(--space-md);
+  padding: var(--space-sm);
   // box-shadow: 0 3px 0 var(--cd-color-2);
   // box-shadow: 0 3px 0 var(--cd-darker-green);
   box-shadow: 0 4px 10px rgb(109, 138, 147);
@@ -647,16 +650,20 @@ section {
 
   h2 {
     color: var(--cd-color-1);
+    padding-bottom: 1rem;
+    font-weight: 00;
   }
 
   p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding-top: 0.6rem;
+    margin-left: var(--space-sm);
   }
 
   img {
-    width: 100%;
+    width: 60%;
     height: auto;
+    object-fit: cover;
   }
 
   @include breakpoint(md) {
@@ -681,9 +688,15 @@ section {
   }
 }
 
+.content-row {
+  display: flex;
+  // align-items: center;
+  width: 100%;
+}
+
 .cd-timeline__date {
-  color: alpha(var(--cd-color-3), 0.7);
-  font-size: 1rem;
+  color: alpha(var(--cd-color-2), 0.7);
+  font-size: 1.2rem;
 
   @include breakpoint(md) {
     position: absolute;
