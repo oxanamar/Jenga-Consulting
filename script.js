@@ -8,7 +8,7 @@ document.addEventListener("scroll", () => {
     logo.classList.add("scrolled");
   } else {
     header.classList.remove("header-green");
-    logo.src = "./img/logocorrect.png";
+    logo.src = "./img/logonew.png";
     logo.classList.remove("scrolled");
   }
 });
