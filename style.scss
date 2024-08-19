@@ -243,8 +243,7 @@ section {
 
   h2 {
     font-family: var(--font-secondary);
-    font-weight: 700;
-    font-size: 1.6rem;
+    font-weight: 500;
   }
 }
 
@@ -322,10 +321,11 @@ section {
 }
 
 .cd-timeline__content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+  // transform: scale(0.8); //add
+  // transform-origin: top; //add
+  flex-grow: 1; // expand element so that it takes up all the available space inside its parent
+  position: relative;
+  margin-left: var(--space-md);
   background: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--space-sm);
@@ -346,15 +346,13 @@ section {
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-top: 0.6rem;
-    margin-left: var(--space-sm);
   }
 
   img {
-    width: 60%;
+    width: 100%;
     height: auto;
-    object-fit: cover;
   }
 
   @include breakpoint(md) {
