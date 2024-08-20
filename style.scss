@@ -557,7 +557,8 @@ section {
 
   h2 {
     font-family: var(--font-secondary);
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1.6rem;
   }
 }
 
@@ -704,6 +705,7 @@ section {
   display: flex;
   // align-items: center;
   width: 100%;
+  margin: 0;
 }
 
 .cd-timeline__date {
