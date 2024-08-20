@@ -320,7 +320,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 60px;
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 }
+
+// Hamburger menu
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+// Humburger menu
 
 header {
   position: fixed;
@@ -382,7 +394,7 @@ header nav ul li a {
   overflow: hidden;
   background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat
     center center/cover;
-  // min-height: 800px;x
+  // min-height: 800px;
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -401,6 +413,8 @@ header nav ul li a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
+
+    // @media (max-width: 820px);
   }
 
   h1 {
@@ -425,6 +439,7 @@ header nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
   }
 }
 
@@ -867,4 +882,114 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
+}
+
+@media (max-width: map-get($breakpoints, "md")) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: $color-darker;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .nav ul li a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+
+    &:hover {
+      color: #324f58;
+      // background-color: #00856f;
+      background-color: rgb(243, 180, 21);
+    }
+  }
+
+  .hero {
+    min-height: 75vh;
+
+    h1 {
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .container-partners {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-img {
+    padding-bottom: 1.5rem;
+  }
+
+  #partners {
+    padding-bottom: 0.5rem;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .wrap {
+    width: 100%;
+  }
+
+  .content-row {
+    flex-direction: column;
+  }
+
+  .cd-timeline__content img {
+    width: 100%;
+  }
+
+  .cd-timeline__img {
+    display: none;
+  }
+
+  .cd-timeline__container {
+    &::before {
+      display: none;
+    }
+  }
+
+  #contact {
+    padding: 1.8rem 0 0 0;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact__block {
+    padding-bottom: 1.8rem;
+  }
+  .block__title {
+    padding: 0;
+  }
 }

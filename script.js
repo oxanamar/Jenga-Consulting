@@ -94,3 +94,10 @@ document.addEventListener("scroll", () => {
     scrolling = false;
   }
 })();
+
+// Humburger
+document
+  .getElementById("hamburger-menu")
+  .addEventListener("click", function () {
+    document.getElementById("nav").classList.toggle("active");
+  });
