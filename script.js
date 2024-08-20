@@ -101,3 +101,10 @@ document
   .addEventListener("click", function () {
     document.getElementById("nav").classList.toggle("active");
   });
+
+//Close menu after clicking on a link
+document.querySelectorAll(".menu a").forEach((link) => {
+  link.addEventListener("click", function () {
+    document.getElementById("nav").classList.remove("active");
+  });
+});

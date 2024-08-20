@@ -684,6 +684,7 @@ section {
 
   p {
     font-size: 0.8rem;
+    // font-size: 1rem;
     padding-top: 0.6rem;
     padding-left: 0.5rem;
   }
@@ -873,6 +874,7 @@ section {
 
   p {
     font-weight: 700;
+    text-decoration: none;
   }
 }
 
@@ -898,10 +900,13 @@ footer {
     width: 200px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
   }
 
   .nav.active {
     display: block;
+    transform: translateX(0);
   }
 
   .nav ul {
@@ -991,5 +996,17 @@ footer {
   }
   .block__title {
     padding: 0;
+  }
+
+  .cd-timeline__date {
+    padding-top: 0.5rem;
+    color: $color-darker;
+    font-weight: 500;
+  }
+
+  .cd-timeline__content {
+    p {
+      font-size: 1.2rem;
+    }
   }
 }

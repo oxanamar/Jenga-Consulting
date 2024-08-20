@@ -12383,6 +12383,7 @@ section {
 }
 .block__title p {
   font-weight: 700;
+  text-decoration: none;
 }
 
 footer {
@@ -12405,9 +12406,12 @@ footer {
     width: 200px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
   }
   .nav.active {
     display: block;
+    transform: translateX(0);
   }
   .nav ul {
     flex-direction: column;
@@ -12476,5 +12480,13 @@ footer {
   }
   .block__title {
     padding: 0;
+  }
+  .cd-timeline__date {
+    padding-top: 0.5rem;
+    color: rgb(50, 79, 88);
+    font-weight: 500;
+  }
+  .cd-timeline__content p {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
