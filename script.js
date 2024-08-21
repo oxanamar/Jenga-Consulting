@@ -125,3 +125,20 @@ document.querySelectorAll(".menu a").forEach((link) => {
     document.getElementById("close-icon").style.display = "none";
   });
 });
+
+//Close menu when clicking outside of it
+document.addEventListener("click", function (event) {
+  const nav = document.getElementById("nav");
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const isClickInsideMenu =
+    hamburgerMenu.contains(event.target) || nav.contains(event.target);
+
+  //If the click is outside the menu and the menu is open, close it
+  if (!isClickInsideMenu && nav.classList.contains("active")) {
+    nav.classList.remove("active");
+
+    //Reset the hamburger icon
+    document.getElementById("hamburger-icon").style.display = "block";
+    document.getElementById("close-icon").style.display = "none";
+  }
+});
