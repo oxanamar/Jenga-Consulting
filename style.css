@@ -12390,6 +12390,10 @@ section {
   text-align: center;
 }
 
+.tel {
+  text-decoration: none;
+}
+
 footer {
   background: rgb(50, 79, 88);
   color: #fff;
@@ -12489,5 +12493,8 @@ footer {
     padding-top: 0.5rem;
     color: rgb(50, 79, 88);
     font-weight: 500;
+  }
+  .cd-timeline__content p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

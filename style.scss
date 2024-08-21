@@ -882,6 +882,10 @@ section {
   text-align: center;
 }
 
+.tel {
+  text-decoration: none;
+}
+
 // Footer
 footer {
   background: $color-darker;
@@ -1006,5 +1010,9 @@ footer {
     padding-top: 0.5rem;
     color: $color-darker;
     font-weight: 500;
+  }
+
+  .cd-timeline__content p {
+    font-size: 1rem;
   }
 }
