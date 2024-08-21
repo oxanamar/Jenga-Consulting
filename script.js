@@ -13,7 +13,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Highlights
+// Milestines
 (function () {
   // Vertical Timeline - by CodyHouse.co
   function VerticalTimeline(element) {

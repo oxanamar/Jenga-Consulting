@@ -294,6 +294,7 @@ $color-grey: rgb(109, 138, 147);
 $color-sky: #4f6c75;
 $color-darker: rgb(50, 79, 88);
 $color-yellow: rgb(243, 180, 21);
+$color-hover: #e0e0e0;
 $xxL: 1920px;
 $xL: 1560px;
 
@@ -331,6 +332,15 @@ body {
 .hamburger-menu {
   display: none;
   cursor: pointer;
+
+  i {
+    color: #fff;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-hover;
+    }
+  }
 }
 
 // Humburger menu
@@ -377,17 +387,48 @@ header nav {
 
 header nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 header nav ul li {
-  display: inline;
-  margin-left: 20px;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 header nav ul li a {
+  position: relative;
   color: #fff;
   text-decoration: none;
   font-weight: 400;
+  display: block;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: $color-hover;
+  }
+
+  // The underline
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: $color-hover;
+    transition: width 0.3s ease;
+  }
+}
+
+/* On hover or focus - underline grows from left to right */
+.menu a:hover::after,
+.menu a:focus::after,
+.menu a.active::after {
+  /* For active state if needed */
+  width: 100%;
 }
 
 .hero {
@@ -687,7 +728,7 @@ section {
     font-size: 0.8rem;
     // font-size: 1rem;
     padding-top: 0.6rem;
-    padding-left: 0.5rem;
+    padding-left: 0.8rem;
   }
 
   img {
@@ -883,10 +924,6 @@ section {
   text-align: center;
 }
 
-.tel {
-  text-decoration: none;
-}
-
 // Footer
 footer {
   background: $color-darker;
@@ -895,6 +932,52 @@ footer {
   padding: 10px 0;
 }
 
+//iPad
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cd-timeline__content {
+    width: 60%; /* Reduce the width of the content cards */
+    padding: 15px; /* Reduce padding */
+    text-align: center;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .cd-timeline__content h2 {
+    font-size: 1.2rem; /* Adjust the font size if necessary */
+  }
+
+  .cd-timeline__content p {
+    font-size: 0.9rem; /* Adjust the font size if necessary */
+  }
+
+  .cd-timeline__content img {
+    width: 80%; /* Adjust image size within the card */
+  }
+
+  .cd-timeline__container {
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .cd-timeline__block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cd-timeline__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+  }
+}
+
+//iPad & Mobile
 @media (max-width: map-get($breakpoints, "md")) {
   .hamburger-menu {
     display: block;
@@ -911,6 +994,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
+    padding: 1rem;
   }
 
   .nav.active {
@@ -920,13 +1004,13 @@ footer {
 
   .nav ul {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .nav ul li {
     width: 100%;
     text-align: left;
-    padding: 10px 20px;
+    margin: 0;
   }
 
   .nav ul li a {
@@ -936,9 +1020,11 @@ footer {
     padding: 10px 15px;
 
     &:hover {
-      color: #324f58;
-      // background-color: #00856f;
-      background-color: rgb(243, 180, 21);
+      color: $color-hover;
+
+      &::after {
+        width: 0;
+      }
     }
   }
 
