@@ -293,6 +293,7 @@ $color-light: #f1f7f6;
 $color-grey: rgb(109, 138, 147);
 $color-sky: #4f6c75;
 $color-darker: rgb(50, 79, 88);
+$color-yellow: rgb(243, 180, 21);
 $xxL: 1920px;
 $xL: 1560px;
 
@@ -1008,7 +1009,7 @@ footer {
 
   .cd-timeline__date {
     padding-top: 0.5rem;
-    color: $color-darker;
+    color: $color-yellow;
     font-weight: 500;
   }
 

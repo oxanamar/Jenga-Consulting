@@ -95,16 +95,33 @@ document.addEventListener("scroll", () => {
   }
 })();
 
-// Humburger
+// Hamburger
 document
   .getElementById("hamburger-menu")
   .addEventListener("click", function () {
-    document.getElementById("nav").classList.toggle("active");
+    const nav = document.getElementById("nav");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    nav.classList.toggle("active");
+
+    //Toggle the icons
+    if (nav.classList.contains("active")) {
+      hamburgerIcon.style.display = "none";
+      closeIcon.style.display = "block";
+    } else {
+      hamburgerIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }
   });
 
 //Close menu after clicking on a link
 document.querySelectorAll(".menu a").forEach((link) => {
   link.addEventListener("click", function () {
     document.getElementById("nav").classList.remove("active");
+
+    //Reset icons when menu is closed
+    document.getElementById("hamburger-icon").style.display = "block";
+    document.getElementById("close-icon").style.display = "none";
   });
 });
