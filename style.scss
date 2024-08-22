@@ -943,8 +943,9 @@ footer {
     text-align: center;
 
     &::before {
-      left: 50%;
-      transform: translateX(-50%);
+      // left: 50%;
+      // transform: translateX(-50%);
+      display: none;
     }
   }
 
@@ -1003,6 +1004,7 @@ footer {
   .nav.active {
     display: block;
     transform: translateX(0);
+    // transform: translateX(0) translateY(20px);
   }
 
   .nav ul {
