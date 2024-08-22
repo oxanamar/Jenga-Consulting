@@ -12035,12 +12035,8 @@ header nav ul li a::after {
   position: relative;
   z-index: 1;
 }
-.hero .btn {
-  background: rgb(243, 180, 21);
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+
+.btn.btn--primary {
   cursor: pointer;
 }
 

@@ -455,8 +455,6 @@ header nav ul li a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
-
-    // @media (max-width: 820px);
   }
 
   h1 {
@@ -474,15 +472,20 @@ header nav ul li a {
     z-index: 1;
   }
 
-  .btn {
-    // background: #ff9900;
-    background: rgb(243, 180, 21);
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  // .btn {
+  //   // background: #ff9900;
+  //   background: rgb(243, 180, 21);
+  //   color: #fff;
+  //   padding: 10px 20px;
+  //   text-decoration: none;
+  //   border-radius: 5px;
+  //   cursor: pointer;
+  // }
+}
+
+// Button
+.btn.btn--primary {
+  cursor: pointer;
 }
 
 section {
