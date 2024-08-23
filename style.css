@@ -12036,18 +12036,22 @@ header nav ul li a::after {
   z-index: 1;
 }
 
-.btn {
-  background: rgb(243, 180, 21);
-  color: #fff;
+.btn-grad {
+  background-image: linear-gradient(to right, #136a8a 0%, #267871 51%, #136a8a 100%);
+  margin: 10px;
   padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  position: relative;
-  z-index: 2;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
   display: inline-block;
 }
-.btn:hover {
-  background-color: rgb(255, 200, 60);
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 section {
