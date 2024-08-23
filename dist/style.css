@@ -1556,8 +1556,7 @@ footer {
     text-align: center;
   }
   .cd-timeline__content::before {
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
   }
   .cd-timeline__content h2 {
     font-size: 1.2rem; /* Adjust the font size if necessary */
@@ -1676,7 +1675,7 @@ footer {
   }
   .cd-timeline__date {
     padding-top: 0.5rem;
-    color: #e0e0e0;
+    color: #c7c7c7;
     font-weight: 500;
   }
   .cd-timeline__content p {
