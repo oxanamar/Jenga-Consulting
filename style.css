@@ -12003,7 +12003,7 @@ header nav ul li a::after {
 .hero {
   position: relative;
   overflow: hidden;
-  background: url("./img/181ef63e-b881-4a0d-abfd-83da2eecb13a.JPG") no-repeat center center/cover;
+  background: url("./img/background.jpg") no-repeat center center/cover;
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -12047,7 +12047,7 @@ header nav ul li a::after {
   display: inline-block;
 }
 .btn:hover {
-  background-color: #c7c7c7;
+  background-color: rgb(255, 200, 60);
 }
 
 section {
