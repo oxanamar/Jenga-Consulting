@@ -12391,6 +12391,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-content: center;
+  gap: 30px;
 }
 
 .partner-img {
@@ -12404,6 +12405,11 @@ section {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.partner-img-last {
+  height: 125px;
+  overflow: visible;
 }
 
 .contact-container {
