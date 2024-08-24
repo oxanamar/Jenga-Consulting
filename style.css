@@ -12261,7 +12261,8 @@ section {
   font-weight: 700;
 }
 .cd-timeline__content p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
   padding-top: 0.6rem;
   padding-left: 0.8rem;
 }
@@ -12391,7 +12392,6 @@ section {
   display: flex;
   justify-content: space-around;
   align-content: center;
-  gap: 30px;
 }
 
 .partner-img {
@@ -12501,7 +12501,8 @@ footer {
   }
   .nav.active {
     display: block;
-    transform: translateX(0);
+    transform: translateX(0) translateY(20px);
+    transition: transform 0.3s ease-in-out;
   }
   .nav ul {
     flex-direction: column;

@@ -109,9 +109,17 @@ document
     if (nav.classList.contains("active")) {
       hamburgerIcon.style.display = "none";
       closeIcon.style.display = "block";
+
+      //Set the transform based on scroll position
+      if (window.scrollY > 0) {
+        nav.style.transform = "translateX(0)";
+      } else {
+        nav.style.transform = "translateX(0) translateY(20px)";
+      }
     } else {
       hamburgerIcon.style.display = "block";
       closeIcon.style.display = "none";
+      nav.style.transform = "";
     }
   });
 
@@ -140,5 +148,16 @@ document.addEventListener("click", function (event) {
     //Reset the hamburger icon
     document.getElementById("hamburger-icon").style.display = "block";
     document.getElementById("close-icon").style.display = "none";
+  }
+});
+
+//Menu position during scroll
+window.addEventListener("scroll", function () {
+  const nav = this.document.getElementById("nav");
+
+  if (this.window.scrollY > 0 && nav.classList.contains("active")) {
+    nav.style.transform = "translateX(0)";
+  } else if (nav.classList.contains("active")) {
+    nav.style.transform = "translateX(0) translateY(20px)";
   }
 });
