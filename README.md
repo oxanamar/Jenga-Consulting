@@ -1,4 +1,4 @@
-# Responsive website for Jenga Consulting Company 🇨🇩
+# Responsive website for Jenga Consulting 🇨🇩
 
 Welcome to the **Jenga Consulting** Website Repository! 
 
@@ -35,8 +35,8 @@ If you’d like to run the project locally, follow these steps:
 
 Run the following command in your terminal:
 ```bash
-git clone https://github.com/oxanamar/Jenga-Consulting-Company.git
-cd Jenga-Consulting-Company
+git clone https://github.com/oxanamar/Jenga-Consulting.git
+cd Jenga-Consulting
 ```
 
 ### Step 2: Open the Project
