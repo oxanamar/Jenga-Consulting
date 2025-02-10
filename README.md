@@ -42,9 +42,6 @@ cd Jenga-Consulting
 ### Step 2: Open the Project
 Simply open the index.html file in your preferred browser to view the website locally.
 
-### Step 3: View the Live Site
-You can also view the live site at: [Jenga Consulting Website](https://jenga-consulting.netlify.app/)
-
 <br><br>
 
 😊 Thank you for visiting! 
